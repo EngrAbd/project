@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="stylesheet" href="index.css">
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>E-Voting System Login</title>
+</head>
+<body>
+  <div class="container">
+    <h1>E-Voting System Login</h1>
+    <form id="loginForm">
+      <label for="voterNumber">Voter Number:</label>
+      <input type="text" id="voterNumber" name="voterNumber" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required minlength="8" maxlength="20" 
+      pattern="(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,20}" placeholder="Enter your password (8-20 characters, must include a number and a symbol)">
+      
+      <button type="submit">Login</button>
+      <a href="#" id="forgotPassword">Forgot Password?</a>
+    </form>
+  </div>
+  
+  <!-- Forgot Password Modal -->
+  <div id="forgotPasswordModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Forgot Password</h2>
+      <form id="forgotPasswordForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        
+        <label for="resetVoterNumber">Voter Number:</label>
+        <input type="text" id="resetVoterNumber" name="resetVoterNumber" required>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript file loaded asynchronously -->
+  <script src="document.js" async></script>
+</body>
+</html>
